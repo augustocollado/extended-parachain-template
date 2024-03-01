@@ -137,3 +137,30 @@ polkadot-service = { version = "2.0.0" }
 xcm = { package = "staging-xcm", version = "2.0.0", default-features = false }
 xcm-builder = { package = "staging-xcm-builder", version = "2.0.0", default-features = false }
 xcm-executor = { package = "staging-xcm-executor", version = "2.0.0", default-features = false }
+
+# Tanssi w/ Polkadot v1.1
+
+pallet-cc-authorities-noting = { git = "https://github.com/moondance-labs/tanssi", tag = "runtime-300-templates", default-features = false }
+tp-consensus = { git = "https://github.com/moondance-labs/tanssi", tag = "runtime-300-templates", default-features = false }
+
+nimbus-primitives = { git = "https://github.com/moondance-labs/moonkit", branch = "tanssi-polkadot-v1.1.0", default-features = false }
+pallet-author-inherent = { git = "https://github.com/moondance-labs/moonkit", branch = "tanssi-polkadot-v1.1.0", default-features = false }
+pallet-maintenance-mode = { git = "https://github.com/moondance-labs/moonkit", branch = "tanssi-polkadot-v1.1.0", default-features = false }
+pallet-migrations = { git = "https://github.com/moondance-labs/moonkit", branch = "tanssi-polkadot-v1.1.0", default-features = false }
+xcm-primitives = { git = "https://github.com/moondance-labs/moonkit", branch = "tanssi-polkadot-v1.1.0", default-features = false }
+async-io = "1.3"
+async-trait = "0.1"
+container-chain-template-simple-runtime = { path = "runtime/simple/runtime", default-features = false }
+cumulus-client-network = { version = "0.1.0", default-features = false }
+nimbus-consensus = { git = "https://github.com/moondance-labs/moonkit", branch = "tanssi-polkadot-v1.1.0" }
+sc-consensus-manual-seal = { version = "0.10.0-dev" }
+sc-network-common = { version = "0.10.0-dev" }
+sp-consensus = { version = "0.10.0-dev", default-features = false }
+tc-consensus = { git = "https://github.com/moondance-labs/tanssi", tag = "runtime-300-templates" }
+pallet-proxy = {  version = "4.0.0-dev", default-features = false }
+sp-debug-derive = { version = "8.0.0", default-features = false }
+sp-trie = { version = "22.0.0", default-features = false }
+staging-xcm = { version = "1.0.0", default-features = false }
+staging-xcm-builder = { version = "1.0.0", default-features = false }
+staging-xcm-executor = { version = "1.0.0", default-features = false }
+sp-externalities = { version = "0.23.0" }
