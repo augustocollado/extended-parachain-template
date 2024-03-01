@@ -2,7 +2,8 @@
 panic = "unwind"
 
 [workspace]
-members = ["node", "pallets/*", "runtime/mainnet", "runtime/devnet"]
+# members = ["node", "pallets/*", "runtime/mainnet", "runtime/devnet"]
+members = ["runtime/simple/*"]
 resolver = "2"
 
 [workspace.package]
