@@ -93,9 +93,9 @@ dependencies = [
 
 [[package]]
 name = "ahash"
-version = "0.8.10"
+version = "0.8.11"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8b79b82693f705137f8fb9b37871d99e4f9a7df12b917eed79c3d3954830a60b"
+checksum = "e89da841a80418a9b391ebaea17f5c112ffaaa96f621d2c285b5174da76b9011"
 dependencies = [
  "cfg-if",
  "getrandom 0.2.12",
@@ -1437,9 +1437,9 @@ checksum = "c2459377285ad874054d797f3ccebf984978aa39129f6eafde5cdc8315b612f8"
 
 [[package]]
 name = "const-random"
-version = "0.1.17"
+version = "0.1.18"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5aaf16c9c2c612020bcfd042e170f6e32de9b9d75adb5277cdbbd2e2c8c8299a"
+checksum = "87e00182fe74b066627d63b85fd550ac2998d4b0bd86bfed477a0ae4c7c71359"
 dependencies = [
  "const-random-macro",
 ]
@@ -1565,7 +1565,7 @@ dependencies = [
  "pallet-session",
  "pallet-sudo",
  "pallet-timestamp",
- "pallet-transaction-payment 23.0.0",
+ "pallet-transaction-payment",
  "pallet-transaction-payment-rpc-runtime-api",
  "pallet-utility",
  "pallet-xcm",
@@ -1589,9 +1589,9 @@ dependencies = [
  "sp-trie 22.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "sp-version 24.0.0",
  "staging-parachain-info",
- "staging-xcm 1.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "staging-xcm-builder 1.0.0",
- "staging-xcm-executor 1.0.0",
+ "staging-xcm 2.0.1",
+ "staging-xcm-builder",
+ "staging-xcm-executor",
  "substrate-wasm-builder",
  "tp-consensus",
  "xcm-primitives",
@@ -2410,7 +2410,7 @@ dependencies = [
  "sp-runtime 26.0.0",
  "sp-std 10.0.0",
  "staging-xcm 2.0.1",
- "staging-xcm-executor 2.0.0",
+ "staging-xcm-executor",
 ]
 
 [[package]]
@@ -2557,8 +2557,8 @@ dependencies = [
  "sp-runtime 26.0.0",
  "sp-std 10.0.0",
  "staging-xcm 2.0.1",
- "staging-xcm-builder 2.0.1",
- "staging-xcm-executor 2.0.0",
+ "staging-xcm-builder",
+ "staging-xcm-executor",
 ]
 
 [[package]]
@@ -3507,12 +3507,13 @@ dependencies = [
 
 [[package]]
 name = "expander"
-version = "2.0.0"
+version = "2.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5f86a749cf851891866c10515ef6c299b5c69661465e9c3bbe7e07a2b77fb0f7"
+checksum = "00e83c02035136f1592a47964ea60c05a50e4ed8b5892cfac197063850898d4d"
 dependencies = [
  "blake2",
  "fs-err",
+ "prettier-please",
  "proc-macro2",
  "quote",
  "syn 2.0.52",
@@ -3797,30 +3798,6 @@ dependencies = [
  "sp-runtime-interface 8.0.0",
  "sp-std 6.0.0",
  "sp-storage 8.0.0",
-]
-
-[[package]]
-name = "frame-benchmarking"
-version = "22.0.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5ea80343998e47f5bb0f9f73b96de5ee9b2b76fb567427b5df7384ebcebc93f9"
-dependencies = [
- "frame-support 22.0.0",
- "frame-support-procedural 17.0.0",
- "frame-system 22.0.0",
- "log",
- "parity-scale-codec",
- "paste",
- "scale-info",
- "sp-api 20.0.0",
- "sp-application-crypto 24.0.0",
- "sp-core 22.0.0",
- "sp-io 24.0.0",
- "sp-runtime 25.0.0",
- "sp-runtime-interface 18.0.0",
- "sp-std 9.0.0",
- "sp-storage 14.0.0",
- "static_assertions",
 ]
 
 [[package]]
@@ -4151,7 +4128,7 @@ dependencies = [
  "Inflector",
  "cfg-expr 0.15.7",
  "derive-syn-parse",
- "expander 2.0.0",
+ "expander 2.1.0",
  "frame-support-procedural-tools 4.0.0-dev",
  "itertools 0.10.5",
  "macro_magic",
@@ -4185,7 +4162,7 @@ dependencies = [
  "Inflector",
  "cfg-expr 0.15.7",
  "derive-syn-parse",
- "expander 2.0.0",
+ "expander 2.1.0",
  "frame-support-procedural-tools 6.0.0",
  "itertools 0.10.5",
  "macro_magic",
@@ -4204,7 +4181,7 @@ dependencies = [
  "Inflector",
  "cfg-expr 0.15.7",
  "derive-syn-parse",
- "expander 2.0.0",
+ "expander 2.1.0",
  "frame-support-procedural-tools 7.0.0",
  "itertools 0.10.5",
  "macro_magic",
@@ -4344,26 +4321,6 @@ dependencies = [
  "sp-std 6.0.0",
  "sp-version 6.0.0",
  "sp-weights 5.0.0",
-]
-
-[[package]]
-name = "frame-system"
-version = "22.0.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2c5104921b9e4e8ffee5251caf7d28defa4e97080554b0e57f93a72b1ec8b915"
-dependencies = [
- "cfg-if",
- "frame-support 22.0.0",
- "log",
- "parity-scale-codec",
- "scale-info",
- "serde",
- "sp-core 22.0.0",
- "sp-io 24.0.0",
- "sp-runtime 25.0.0",
- "sp-std 9.0.0",
- "sp-version 23.0.0",
- "sp-weights 21.0.0",
 ]
 
 [[package]]
@@ -4667,9 +4624,9 @@ dependencies = [
 
 [[package]]
 name = "ghash"
-version = "0.5.0"
+version = "0.5.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d930750de5717d2dd0b8c0d42c076c0e884c81a73e6cab859bbd2339c71e3e40"
+checksum = "f0d8a4362ccb29cb0b265253fb0a2728f592895ee6854fd9bc13f2ffda266ff1"
 dependencies = [
  "opaque-debug 0.3.1",
  "polyval",
@@ -4813,7 +4770,7 @@ version = "0.13.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "43a3c133739dddd0d2990f9a4bdf8eb4b21ef50e4851ca85ab661199821d510e"
 dependencies = [
- "ahash 0.8.10",
+ "ahash 0.8.11",
 ]
 
 [[package]]
@@ -4822,7 +4779,7 @@ version = "0.14.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "290f1a1d9242c78d09ce40a5e87e7554ee637af1351968159f4952f028f75604"
 dependencies = [
- "ahash 0.8.10",
+ "ahash 0.8.11",
  "allocator-api2",
  "serde",
 ]
@@ -5595,12 +5552,12 @@ checksum = "9c198f91728a82281a64e1f4f9eeb25d82cb32a5de251c6bd1b5154d63a8e7bd"
 
 [[package]]
 name = "libloading"
-version = "0.8.1"
+version = "0.8.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c571b676ddfc9a8c12f1f3d3085a7b163966a8fd8098a90640953ce5f6170161"
+checksum = "2caa5afb8bf9f3a2652760ce7d4f62d21c4d5a423e68466fca30df82f2330164"
 dependencies = [
  "cfg-if",
- "windows-sys 0.48.0",
+ "windows-targets 0.52.4",
 ]
 
 [[package]]
@@ -6679,9 +6636,9 @@ dependencies = [
 
 [[package]]
 name = "mio"
-version = "0.8.10"
+version = "0.8.11"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8f3d0b296e374a4e6f3c7b0a1f5a51d748a0d34c85e7dc48fc3fa9a87657fe09"
+checksum = "a4a650543ca06a924e8b371db273b2756685faae30f8487da1b56505a8f78b0c"
 dependencies = [
  "libc",
  "wasi 0.11.0+wasi-snapshot-preview1",
@@ -8265,23 +8222,6 @@ dependencies = [
 
 [[package]]
 name = "pallet-transaction-payment"
-version = "22.0.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "183056a736520fc6d60f7f70b48c80da4dcb046a418527ea45c4a52ca55532e2"
-dependencies = [
- "frame-support 22.0.0",
- "frame-system 22.0.0",
- "parity-scale-codec",
- "scale-info",
- "serde",
- "sp-core 22.0.0",
- "sp-io 24.0.0",
- "sp-runtime 25.0.0",
- "sp-std 9.0.0",
-]
-
-[[package]]
-name = "pallet-transaction-payment"
 version = "23.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "8eeaaeaf89f80fe3d19ff9ed60430423a7ea70ca91747b04be830499334d55d3"
@@ -8320,7 +8260,7 @@ version = "23.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "5c8ee4c219399d7353548641d31aea760007f88223d6de72048fd9d13a9a6601"
 dependencies = [
- "pallet-transaction-payment 23.0.0",
+ "pallet-transaction-payment",
  "parity-scale-codec",
  "sp-api 21.0.0",
  "sp-runtime 26.0.0",
@@ -8413,7 +8353,7 @@ dependencies = [
  "sp-runtime 26.0.0",
  "sp-std 10.0.0",
  "staging-xcm 2.0.1",
- "staging-xcm-executor 2.0.0",
+ "staging-xcm-executor",
 ]
 
 [[package]]
@@ -8432,8 +8372,8 @@ dependencies = [
  "sp-runtime 26.0.0",
  "sp-std 10.0.0",
  "staging-xcm 2.0.1",
- "staging-xcm-builder 2.0.1",
- "staging-xcm-executor 2.0.0",
+ "staging-xcm-builder",
+ "staging-xcm-executor",
 ]
 
 [[package]]
@@ -8621,9 +8561,9 @@ checksum = "e3148f5046208a5d56bcfc03053e3ca6334e51da8dfb19b6cdc8b306fae3283e"
 
 [[package]]
 name = "pest"
-version = "2.7.7"
+version = "2.7.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "219c0dcc30b6a27553f9cc242972b67f75b60eb0db71f0b5462f38b058c41546"
+checksum = "56f8023d0fb78c8e03784ea1c7f3fa36e68a723138990b8d5a47d916b651e7a8"
 dependencies = [
  "memchr",
  "thiserror",
@@ -8632,9 +8572,9 @@ dependencies = [
 
 [[package]]
 name = "pest_derive"
-version = "2.7.7"
+version = "2.7.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "22e1288dbd7786462961e69bfd4df7848c1e37e8b74303dbdab82c3a9cdd2809"
+checksum = "b0d24f72393fd16ab6ac5738bc33cdb6a9aa73f8b902e8fe29cf4e67d7dd1026"
 dependencies = [
  "pest",
  "pest_generator",
@@ -8642,9 +8582,9 @@ dependencies = [
 
 [[package]]
 name = "pest_generator"
-version = "2.7.7"
+version = "2.7.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1381c29a877c6d34b8c176e734f35d7f7f5b3adaefe940cb4d1bb7af94678e2e"
+checksum = "fdc17e2a6c7d0a492f0158d7a4bd66cc17280308bbaff78d5bef566dca35ab80"
 dependencies = [
  "pest",
  "pest_meta",
@@ -8655,9 +8595,9 @@ dependencies = [
 
 [[package]]
 name = "pest_meta"
-version = "2.7.7"
+version = "2.7.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d0934d6907f148c22a3acbda520c7eed243ad7487a30f51f6ce52b58b7077a8a"
+checksum = "934cd7631c050f4674352a6e835d5f6711ffbfb9345c2fc0107155ac495ae293"
 dependencies = [
  "once_cell",
  "pest",
@@ -10056,7 +9996,7 @@ dependencies = [
  "pallet-staking-runtime-api",
  "pallet-timestamp",
  "pallet-tips",
- "pallet-transaction-payment 23.0.0",
+ "pallet-transaction-payment",
  "pallet-transaction-payment-rpc-runtime-api",
  "pallet-treasury",
  "pallet-utility",
@@ -10094,8 +10034,8 @@ dependencies = [
  "sp-transaction-pool 21.0.0",
  "sp-version 24.0.0",
  "staging-xcm 2.0.1",
- "staging-xcm-builder 2.0.1",
- "staging-xcm-executor 2.0.0",
+ "staging-xcm-builder",
+ "staging-xcm-executor",
  "static_assertions",
  "substrate-wasm-builder",
 ]
@@ -10123,7 +10063,7 @@ dependencies = [
  "pallet-staking",
  "pallet-staking-reward-fn",
  "pallet-timestamp",
- "pallet-transaction-payment 23.0.0",
+ "pallet-transaction-payment",
  "pallet-treasury",
  "pallet-vesting",
  "parity-scale-codec",
@@ -10219,7 +10159,7 @@ dependencies = [
  "sp-staking 21.0.0",
  "sp-std 10.0.0",
  "staging-xcm 2.0.1",
- "staging-xcm-executor 2.0.0",
+ "staging-xcm-executor",
  "static_assertions",
 ]
 
@@ -10245,7 +10185,7 @@ dependencies = [
  "pallet-babe",
  "pallet-im-online",
  "pallet-staking",
- "pallet-transaction-payment 23.0.0",
+ "pallet-transaction-payment",
  "pallet-transaction-payment-rpc-runtime-api",
  "parity-db",
  "parity-scale-codec",
@@ -10444,9 +10384,9 @@ dependencies = [
 
 [[package]]
 name = "polyval"
-version = "0.6.1"
+version = "0.6.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d52cff9d1d4dee5fe6d03729099f4a310a41179e0a10dbf542039873f2e826fb"
+checksum = "9d1fe60d06143b2430aa532c94cfe9e29783047f06c0d7fd359a9a51b729fa25"
 dependencies = [
  "cfg-if",
  "cpufeatures",
@@ -10503,10 +10443,20 @@ dependencies = [
 ]
 
 [[package]]
-name = "prettyplease"
-version = "0.1.25"
+name = "prettier-please"
+version = "0.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6c8646e95016a7a6c4adea95bafa8a16baab64b583356217f2c85db4a39d9a86"
+checksum = "22020dfcf177fcc7bf5deaf7440af371400c67c0de14c399938d8ed4fb4645d3"
+dependencies = [
+ "proc-macro2",
+ "syn 2.0.52",
+]
+
+[[package]]
+name = "prettyplease"
+version = "0.1.11"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f28f53e8b192565862cf99343194579a022eb9c7dd3a8d03134734803c7b3125"
 dependencies = [
  "proc-macro2",
  "syn 1.0.109",
@@ -10698,7 +10648,7 @@ dependencies = [
  "log",
  "multimap",
  "petgraph",
- "prettyplease 0.1.25",
+ "prettyplease 0.1.11",
  "prost",
  "prost-types",
  "regex",
@@ -11212,7 +11162,7 @@ dependencies = [
  "pallet-sudo",
  "pallet-timestamp",
  "pallet-tips",
- "pallet-transaction-payment 23.0.0",
+ "pallet-transaction-payment",
  "pallet-transaction-payment-rpc-runtime-api",
  "pallet-treasury",
  "pallet-utility",
@@ -11247,8 +11197,8 @@ dependencies = [
  "sp-transaction-pool 21.0.0",
  "sp-version 24.0.0",
  "staging-xcm 2.0.1",
- "staging-xcm-builder 2.0.1",
- "staging-xcm-executor 2.0.0",
+ "staging-xcm-builder",
+ "staging-xcm-executor",
  "static_assertions",
  "substrate-wasm-builder",
 ]
@@ -12558,7 +12508,7 @@ version = "0.14.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "fc9029e051a1ff62dff58219ca654ebecc669e3746cf4a0bc1515f96c2220c9b"
 dependencies = [
- "ahash 0.8.10",
+ "ahash 0.8.11",
  "array-bytes 6.2.2",
  "async-trait",
  "dyn-clone",
@@ -13370,7 +13320,7 @@ version = "0.29.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "596fa23e269e218a5cbd9928fa1df30c46fbf9f04cdcf0cbd6549c47e952ad77"
 dependencies = [
- "ahash 0.8.10",
+ "ahash 0.8.11",
  "futures 0.3.30",
  "futures-timer",
  "libp2p 0.51.4",
@@ -14751,7 +14701,7 @@ version = "0.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "772575a524feeb803e5b0fcbc6dd9f367e579488197c94c6e4023aad2305774d"
 dependencies = [
- "ahash 0.8.10",
+ "ahash 0.8.11",
  "cfg-if",
  "hashbrown 0.13.2",
 ]
@@ -15389,7 +15339,7 @@ source = "git+https://github.com/moondance-labs/polkadot-sdk?branch=tanssi-polka
 dependencies = [
  "Inflector",
  "blake2",
- "expander 2.0.0",
+ "expander 2.1.0",
  "proc-macro-crate 1.3.1",
  "proc-macro2",
  "quote",
@@ -15417,7 +15367,7 @@ checksum = "a062dfff051064bfa1837566b74d00a49050b36e3887b2283ab667cef4f3a85e"
 dependencies = [
  "Inflector",
  "blake2",
- "expander 2.0.0",
+ "expander 2.1.0",
  "proc-macro-crate 1.3.1",
  "proc-macro2",
  "quote",
@@ -15432,7 +15382,7 @@ checksum = "972809a3e3a583423bca2ee6d08eb5397814ef6b265abf43e888c4ed9916ff83"
 dependencies = [
  "Inflector",
  "blake2",
- "expander 2.0.0",
+ "expander 2.1.0",
  "proc-macro-crate 1.3.1",
  "proc-macro2",
  "quote",
@@ -17895,7 +17845,7 @@ name = "sp-trie"
 version = "22.0.0"
 source = "git+https://github.com/moondance-labs/polkadot-sdk?branch=tanssi-polkadot-v1.1.0#74274ad50a52a604a3d6c5bc5ab5eddc17e4df68"
 dependencies = [
- "ahash 0.8.10",
+ "ahash 0.8.11",
  "hash-db 0.16.0",
  "hashbrown 0.13.2",
  "lazy_static",
@@ -17919,7 +17869,7 @@ version = "23.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "bf63ea90ffb5d61048d8fb2fac669114dac198fc2739e913e615f0fd2c36c3e7"
 dependencies = [
- "ahash 0.8.10",
+ "ahash 0.8.11",
  "hash-db 0.16.0",
  "hashbrown 0.13.2",
  "lazy_static",
@@ -17943,7 +17893,7 @@ version = "24.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "e78585a84d02d1c71e8eb8c00ed586c22a46ad4e773d9ff65c8ed3b8e98b9f51"
 dependencies = [
- "ahash 0.8.10",
+ "ahash 0.8.11",
  "hash-db 0.16.0",
  "hashbrown 0.13.2",
  "lazy_static",
@@ -18336,7 +18286,7 @@ dependencies = [
  "pallet-state-trie-migration",
  "pallet-timestamp",
  "pallet-tips",
- "pallet-transaction-payment 23.0.0",
+ "pallet-transaction-payment",
  "pallet-transaction-payment-rpc-runtime-api",
  "pallet-treasury",
  "pallet-utility",
@@ -18374,8 +18324,8 @@ dependencies = [
  "sp-transaction-pool 21.0.0",
  "sp-version 24.0.0",
  "staging-xcm 2.0.1",
- "staging-xcm-builder 2.0.1",
- "staging-xcm-executor 2.0.0",
+ "staging-xcm-builder",
+ "staging-xcm-executor",
  "static_assertions",
  "substrate-wasm-builder",
 ]
@@ -18449,29 +18399,6 @@ dependencies = [
 
 [[package]]
 name = "staging-xcm-builder"
-version = "1.0.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8998e7eca7c12559fa27df7155d3004c72d93a392b00925af14a68672f3045e1"
-dependencies = [
- "frame-support 22.0.0",
- "frame-system 22.0.0",
- "impl-trait-for-tuples",
- "log",
- "pallet-transaction-payment 22.0.0",
- "parity-scale-codec",
- "polkadot-parachain",
- "scale-info",
- "sp-arithmetic 17.0.0",
- "sp-io 24.0.0",
- "sp-runtime 25.0.0",
- "sp-std 9.0.0",
- "sp-weights 21.0.0",
- "staging-xcm 1.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "staging-xcm-executor 1.0.0",
-]
-
-[[package]]
-name = "staging-xcm-builder"
 version = "2.0.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "07c1ca6d8f2b7fcbfe8866c1a1cb8105b62c72a74e727dd8c9943e8ac0c410eb"
@@ -18480,7 +18407,7 @@ dependencies = [
  "frame-system 23.0.0",
  "impl-trait-for-tuples",
  "log",
- "pallet-transaction-payment 23.0.0",
+ "pallet-transaction-payment",
  "parity-scale-codec",
  "polkadot-parachain-primitives 1.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "scale-info",
@@ -18490,28 +18417,7 @@ dependencies = [
  "sp-std 10.0.0",
  "sp-weights 22.0.0",
  "staging-xcm 2.0.1",
- "staging-xcm-executor 2.0.0",
-]
-
-[[package]]
-name = "staging-xcm-executor"
-version = "1.0.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "95daf8ccd7b492a3eaa902fb85d84850d5fd5431bb91d7ad82dc621cda063e34"
-dependencies = [
- "environmental",
- "frame-benchmarking 22.0.0",
- "frame-support 22.0.0",
- "impl-trait-for-tuples",
- "log",
- "parity-scale-codec",
- "sp-arithmetic 17.0.0",
- "sp-core 22.0.0",
- "sp-io 24.0.0",
- "sp-runtime 25.0.0",
- "sp-std 9.0.0",
- "sp-weights 21.0.0",
- "staging-xcm 1.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "staging-xcm-executor",
 ]
 
 [[package]]
@@ -19486,7 +19392,7 @@ version = "1.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a13465a3d212323eddba32506d861cd258e865b4a23e3d601ca5c5ccfae5fdab"
 dependencies = [
- "expander 2.0.0",
+ "expander 2.1.0",
  "proc-macro-crate 1.3.1",
  "proc-macro2",
  "quote",
@@ -19498,7 +19404,7 @@ name = "tracing-gum-proc-macro"
 version = "1.0.0"
 source = "git+https://github.com/moondance-labs/polkadot-sdk?branch=tanssi-polkadot-v1.1.0#74274ad50a52a604a3d6c5bc5ab5eddc17e4df68"
 dependencies = [
- "expander 2.0.0",
+ "expander 2.1.0",
  "proc-macro-crate 1.3.1",
  "proc-macro2",
  "quote",
@@ -19511,7 +19417,7 @@ version = "2.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "599cd79d4843008763dd613a19ca7d28e12e6c43ab69fc5089b7ce587dd8e021"
 dependencies = [
- "expander 2.0.0",
+ "expander 2.1.0",
  "proc-macro-crate 1.3.1",
  "proc-macro2",
  "quote",
@@ -19853,9 +19759,9 @@ checksum = "f3c4517f54858c779bbcbf228f4fca63d121bf85fbecb2dc578cdf4a39395690"
 
 [[package]]
 name = "walkdir"
-version = "2.4.0"
+version = "2.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d71d857dc86794ca4c280d616f7da00d2dbfd8cd788846559a6813e6aa4b54ee"
+checksum = "29790946404f91d9c5d06f9874efddea1dc06c5efe94541a7d6863108e3a5e4b"
 dependencies = [
  "same-file",
  "winapi-util",
@@ -20570,7 +20476,7 @@ dependencies = [
  "pallet-state-trie-migration",
  "pallet-sudo",
  "pallet-timestamp",
- "pallet-transaction-payment 23.0.0",
+ "pallet-transaction-payment",
  "pallet-transaction-payment-rpc-runtime-api",
  "pallet-treasury",
  "pallet-utility",
@@ -20607,8 +20513,8 @@ dependencies = [
  "sp-transaction-pool 21.0.0",
  "sp-version 24.0.0",
  "staging-xcm 2.0.1",
- "staging-xcm-builder 2.0.1",
- "staging-xcm-executor 2.0.0",
+ "staging-xcm-builder",
+ "staging-xcm-executor",
  "substrate-wasm-builder",
  "westend-runtime-constants",
 ]
